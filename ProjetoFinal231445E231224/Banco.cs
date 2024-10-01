@@ -15,8 +15,8 @@ namespace ProjetoFinal231445E231224
         public static MySqlCommand Comando;
         //adapter responsável por inserir dados em um dataTable
         public static MySqlDataAdapter Adaptador;
-        //Database responsável por ligar o banvo em controles com a propriedade DataSource
-        public static DataTable datTable;
+        //Database responsável por ligar o banco em controles com a propriedade DataSource
+        public static DataTable datTabela;
 
         public static void Abrirconexao()
         {
@@ -59,8 +59,14 @@ namespace ProjetoFinal231445E231224
                 Abrirconexao();
 
                 //Informa a instrução SQL
-                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE database vendas;", Conexao);
+                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE 3vendas;", Conexao);
                 //Executa a query no MySQL (é o raínho do banco)
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Cidades " +
+                    "(id integer auto_increment primary key, " +
+                    "nome char(40), " +
+                    "uf char(02))", Conexao);
                 Comando.ExecuteNonQuery();
 
                 //Chama a função para fechar a conexão com o banco

@@ -30,7 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cIdadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,16 +47,17 @@
             // cadToolStripMenuItem
             // 
             this.cadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cIdadesToolStripMenuItem});
+            this.CidadesToolStripMenuItem});
             this.cadToolStripMenuItem.Name = "cadToolStripMenuItem";
             this.cadToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.cadToolStripMenuItem.Text = "Castros";
             // 
-            // cIdadesToolStripMenuItem
+            // CidadesToolStripMenuItem
             // 
-            this.cIdadesToolStripMenuItem.Name = "cIdadesToolStripMenuItem";
-            this.cIdadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cIdadesToolStripMenuItem.Text = "CIdades";
+            this.CidadesToolStripMenuItem.Name = "CidadesToolStripMenuItem";
+            this.CidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.CidadesToolStripMenuItem.Text = "CIdades";
+            this.CidadesToolStripMenuItem.Click += new System.EventHandler(this.CidadesToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -67,7 +68,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.Text = "Menu do Sistema";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -79,6 +80,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cIdadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CidadesToolStripMenuItem;
     }
 }

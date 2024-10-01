@@ -16,5 +16,15 @@ namespace ProjetoFinal231445E231224
         {
             InitializeComponent();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            Banco.CriarBanco();
+        }
+
+        private void CidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
