@@ -49,14 +49,14 @@
             this.cadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CidadesToolStripMenuItem});
             this.cadToolStripMenuItem.Name = "cadToolStripMenuItem";
-            this.cadToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.cadToolStripMenuItem.Text = "Castros";
+            this.cadToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.cadToolStripMenuItem.Text = "Cadastros";
             // 
             // CidadesToolStripMenuItem
             // 
             this.CidadesToolStripMenuItem.Name = "CidadesToolStripMenuItem";
             this.CidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.CidadesToolStripMenuItem.Text = "CIdades";
+            this.CidadesToolStripMenuItem.Text = "Cidades";
             this.CidadesToolStripMenuItem.Click += new System.EventHandler(this.CidadesToolStripMenuItem_Click);
             // 
             // frmMenu

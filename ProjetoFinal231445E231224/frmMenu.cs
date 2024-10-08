@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProjetoFinal231445E231224.Views;
 using System.Windows.Forms;
 
 namespace ProjetoFinal231445E231224
@@ -24,7 +18,9 @@ namespace ProjetoFinal231445E231224
 
         private void CidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmCidades form = new FrmCidades();
+            form.Show();
         }
+
     }
 }

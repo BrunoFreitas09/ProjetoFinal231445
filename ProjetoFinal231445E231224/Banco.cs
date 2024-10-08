@@ -59,7 +59,7 @@ namespace ProjetoFinal231445E231224
                 Abrirconexao();
 
                 //Informa a instrução SQL
-                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE 3vendas;", Conexao);
+                Comando = new MySqlCommand("CREATE DATABASE IF NOT EXISTS vendas; USE vendas;", Conexao);
                 //Executa a query no MySQL (é o raínho do banco)
                 Comando.ExecuteNonQuery();
 
