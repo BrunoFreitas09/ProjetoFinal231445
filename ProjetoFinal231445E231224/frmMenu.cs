@@ -22,5 +22,10 @@ namespace ProjetoFinal231445E231224
             form.Show();
         }
 
+        private void marcaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmMarcas form = new FrmMarcas();
+            form.Show();
+        }
     }
 }
