@@ -31,17 +31,17 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.txtNomeMarca = new System.Windows.Forms.TextBox();
+            this.btnIncluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvMarca = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -69,66 +69,66 @@
             this.txtID.Size = new System.Drawing.Size(177, 20);
             this.txtID.TabIndex = 2;
             // 
-            // txtMarca
+            // txtNomeMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(23, 102);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(177, 20);
-            this.txtMarca.TabIndex = 3;
+            this.txtNomeMarca.Location = new System.Drawing.Point(23, 102);
+            this.txtNomeMarca.Name = "txtNomeMarca";
+            this.txtNomeMarca.Size = new System.Drawing.Size(177, 20);
+            this.txtNomeMarca.TabIndex = 3;
             // 
-            // button1
+            // btnIncluir
             // 
-            this.button1.Location = new System.Drawing.Point(34, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 39);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnIncluir.Location = new System.Drawing.Point(34, 142);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(98, 39);
+            this.btnIncluir.TabIndex = 4;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Location = new System.Drawing.Point(163, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 39);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.Location = new System.Drawing.Point(163, 142);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(98, 39);
+            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(292, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 39);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(292, 142);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(98, 39);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(425, 142);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 39);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(425, 142);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(98, 39);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnFechar
             // 
-            this.button5.Location = new System.Drawing.Point(562, 142);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 39);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnFechar.Location = new System.Drawing.Point(562, 142);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(98, 39);
+            this.btnFechar.TabIndex = 8;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnBuscar
             // 
-            this.button6.Location = new System.Drawing.Point(562, 219);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 39);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(562, 219);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(98, 39);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtPesquisa
             // 
@@ -146,17 +146,17 @@
             this.lblPesquisa.TabIndex = 10;
             this.lblPesquisa.Text = "Digite o nome da marca";
             // 
-            // dataGridView1
+            // dgvMarca
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(104, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(491, 121);
-            this.dataGridView1.TabIndex = 12;
+            this.dgvMarca.AllowUserToAddRows = false;
+            this.dgvMarca.AllowUserToDeleteRows = false;
+            this.dgvMarca.AllowUserToOrderColumns = true;
+            this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarca.Location = new System.Drawing.Point(104, 273);
+            this.dgvMarca.Name = "dgvMarca";
+            this.dgvMarca.ReadOnly = true;
+            this.dgvMarca.Size = new System.Drawing.Size(491, 121);
+            this.dgvMarca.TabIndex = 12;
             // 
             // FrmMarcas
             // 
@@ -164,23 +164,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMarca);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.lblPesquisa);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnIncluir);
+            this.Controls.Add(this.txtNomeMarca);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblID);
             this.Name = "FrmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de marca";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,15 +191,15 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtNomeMarca;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label lblPesquisa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMarca;
     }
 }

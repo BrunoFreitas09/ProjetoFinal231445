@@ -1,19 +1,18 @@
-﻿
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoFinal231445E231224.Models
 {
-    internal class Cidade
+    internal class Marca
     {
         public int id { get; set; }
-        public string nome { get; set; }
-
-        public string uf { get; set; }
-
-
+        public string Marca { get; set; }
 
 
         public void Incluir()
@@ -23,10 +22,9 @@ namespace ProjetoFinal231445E231224.Models
                 //abrindo a conexão com o banco
                 Banco.Abrirconexao();
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                Banco.Comando = new MySqlCommand("INSERT INTO cidades (nome, uf) VALUES (@nome, @uf)", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("INSERT INTO marcas (nome, uf) VALUES (@nome)", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@nome", nome);//Parâmetro string 
-                Banco.Comando.Parameters.AddWithValue("@uf", uf);
+                Banco.Comando.Parameters.AddWithValue("@nome", Marca);//Parâmetro string 
                 //execura o Comando, no MYSQL, tem afunção do raio do Workbench
                 Banco.Comando.ExecuteNonQuery();
                 //Fecha a conexão
@@ -46,10 +44,9 @@ namespace ProjetoFinal231445E231224.Models
                 //abrindo a conexão com o banco
                 Banco.Abrirconexao();
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                Banco.Comando = new MySqlCommand("Update cidades set nome = @nome, uf = @uf where id = @id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("Update cidades set nome = @nome where id = @id", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@nome", nome);//Parâmetro string 
-                Banco.Comando.Parameters.AddWithValue("@uf", uf);
+                Banco.Comando.Parameters.AddWithValue("@nome", Marca);//Parâmetro string 
                 Banco.Comando.Parameters.AddWithValue("@id", id);
                 //execura o Comando, no MYSQL, tem afunção do raio do Workbench
                 Banco.Comando.ExecuteNonQuery();
@@ -92,10 +89,10 @@ namespace ProjetoFinal231445E231224.Models
                 //abrindo a conexão com o banco
                 Banco.Abrirconexao();
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                Banco.Comando = new MySqlCommand("SELECT * FROM Cidades where nome like @Nome " +   //Esse N maiúsculo é bem sus
+                Banco.Comando = new MySqlCommand("SELECT * FROM marcas where nome like @Nome " +   //Esse N maiúsculo é bem sus
                                                                        "order by nome", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@Nome", nome + "%");
+                Banco.Comando.Parameters.AddWithValue("@Nome", Marca + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
@@ -109,8 +106,5 @@ namespace ProjetoFinal231445E231224.Models
                 return null;
             }
         }
-
     }
-
-   
 }
