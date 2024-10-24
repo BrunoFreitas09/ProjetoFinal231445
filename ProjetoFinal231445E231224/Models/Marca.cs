@@ -12,7 +12,7 @@ namespace ProjetoFinal231445E231224.Models
     internal class Marca
     {
         public int id { get; set; }
-        public string Marca { get; set; }
+        public string marca { get; set; }
 
 
         public void Incluir()
@@ -24,7 +24,7 @@ namespace ProjetoFinal231445E231224.Models
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
                 Banco.Comando = new MySqlCommand("INSERT INTO marcas (nome, uf) VALUES (@nome)", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@nome", Marca);//Parâmetro string 
+                Banco.Comando.Parameters.AddWithValue("@nome", marca);//Parâmetro string 
                 //execura o Comando, no MYSQL, tem afunção do raio do Workbench
                 Banco.Comando.ExecuteNonQuery();
                 //Fecha a conexão

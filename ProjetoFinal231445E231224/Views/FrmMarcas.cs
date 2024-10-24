@@ -32,7 +32,7 @@ namespace ProjetoFinal231445E231224.Views
         {
             m = new Marca()
             {
-                Marca = pesquisa
+                marca = pesquisa
             };
             dgvMarca.DataSource = m.Consultar();
         }
@@ -41,9 +41,9 @@ namespace ProjetoFinal231445E231224.Views
         {
             if (txtNomeMarca.Text == String.Empty) return;
 
-             = new Cidade()
+             m  = new Marca()
             {
-                nome = txtNomeMarca.Text,
+                marca = txtNomeMarca.Text,
 
             };
             m.Incluir();
