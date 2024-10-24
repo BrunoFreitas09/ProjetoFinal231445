@@ -11,9 +11,11 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal231445E231224.Views
 {
+    
     public partial class FrmMarcas : Form
-        Marca M
+        
     {
+        Marca m;
         public FrmMarcas()
         {
             InitializeComponent();
@@ -28,11 +30,11 @@ namespace ProjetoFinal231445E231224.Views
 
         void carregarGrid(string pesquisa)
         {
-            M = new Marca()
+            m = new Marca()
             {
                 Marca = pesquisa
             };
-            dgvMarca.DataSource = M.Consultar();
+            dgvMarca.DataSource = m.Consultar();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
@@ -44,10 +46,15 @@ namespace ProjetoFinal231445E231224.Views
                 nome = txtNomeMarca.Text,
 
             };
-            M.Incluir();
+            m.Incluir();
 
             limpacontroles();
             carregarGrid("");
+        }
+
+        private void btnIncluir_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
