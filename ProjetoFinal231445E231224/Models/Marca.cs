@@ -46,7 +46,7 @@ namespace ProjetoFinal231445E231224.Models
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
                 Banco.Comando = new MySqlCommand("Update cidades set nome = @nome where id = @id", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@nome", Marca);//Parâmetro string 
+                Banco.Comando.Parameters.AddWithValue("@nome", marca);//Parâmetro string 
                 Banco.Comando.Parameters.AddWithValue("@id", id);
                 //execura o Comando, no MYSQL, tem afunção do raio do Workbench
                 Banco.Comando.ExecuteNonQuery();
@@ -92,7 +92,7 @@ namespace ProjetoFinal231445E231224.Models
                 Banco.Comando = new MySqlCommand("SELECT * FROM marcas where nome like @Nome " +   //Esse N maiúsculo é bem sus
                                                                        "order by nome", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@Nome", Marca + "%");
+                Banco.Comando.Parameters.AddWithValue("@Nome", marca + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
