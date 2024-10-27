@@ -20,12 +20,14 @@ namespace ProjetoFinal231445E231224
         {
             FrmCidades form = new FrmCidades();
             form.Show();
+            Banco.CriarTabelas();
         }
 
         private void marcaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmMarcas form = new FrmMarcas();
             form.Show();
+            Banco.CriarTabelas();
         }
     }
 }

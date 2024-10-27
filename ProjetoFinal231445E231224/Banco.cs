@@ -43,9 +43,9 @@ namespace ProjetoFinal231445E231224
                 //Fecha a conexão com o banco de dados 
                 Conexao.Close();
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);   
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,6 +63,31 @@ namespace ProjetoFinal231445E231224
                 //Executa a query no MySQL (é o raínho do banco)
                 Comando.ExecuteNonQuery();
 
+                //Chama a função para fechar a conexão com o banco
+                Fechar_Conexao();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void frmMenu_Load(Object sender, EventArgs e)
+        {
+            Banco.CriarBanco();
+        }
+
+        public static void CriarTabelas()
+        {
+            try
+            {
+
+
+                //Abrindo a conexão
+                Abrirconexao();
+
+
+
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Cidades " +
                     "(id integer auto_increment primary key, " +
                     "nome char(40), " +
@@ -70,23 +95,20 @@ namespace ProjetoFinal231445E231224
                 Comando.ExecuteNonQuery();
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas " +
-                    "(id interger auto_increment primary key," +
+                    "(id integer auto_increment primary key," +
                     "nome char(40))", Conexao);
+                Comando.ExecuteNonQuery();
 
                 //Chama a função para fechar a conexão com o banco
                 Fechar_Conexao();
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void frmMenu_Load(Object sender, EventArgs e)
-        {
-            Banco.CriarBanco(); 
-        }
 
 
+        }
     }
 }

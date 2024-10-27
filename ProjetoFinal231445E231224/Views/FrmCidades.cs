@@ -84,7 +84,7 @@ namespace ProjetoFinal231445E231224.Views
             if (txtID.Text == "") return;
 
 
-            if (MessageBox.Show("Deseja realizar a exclusão da cidade?", "Exclusão",
+            if (MessageBox.Show("Deseja realizar a exclusão da Cidade?", "Exclusão",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 C = new Cidade()
