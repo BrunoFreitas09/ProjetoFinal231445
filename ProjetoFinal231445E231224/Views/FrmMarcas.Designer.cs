@@ -84,7 +84,7 @@
             this.btnIncluir.TabIndex = 4;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
-
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click_1);
             // 
             // btnAlterar
             // 

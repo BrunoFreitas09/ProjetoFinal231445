@@ -102,6 +102,20 @@ namespace ProjetoFinal231445E231224.Views
         {
             carregarGrid(txtPesquisa.Text);
         }
+
+        private void btnIncluir_Click_1(object sender, EventArgs e)
+        {
+            if (txtNomeMarca.Text == String.Empty) return;
+
+            M = new Marca()
+            {
+                marca = txtNomeMarca.Text,
+            };
+            M.Incluir();
+
+            limpacontroles();
+            carregarGrid("");
+        }
     }
 }
 
