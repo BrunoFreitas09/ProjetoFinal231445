@@ -99,6 +99,18 @@ namespace ProjetoFinal231445E231224
                     "nome char(40))", Conexao);
                 Comando.ExecuteNonQuery();
 
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Produtos " +
+                    "(Id integer auto_increment primary key, " +
+                    "descricao char(40), " +
+                    "idCategoria integer," +
+                    "idMarca integer," +
+                    "estoque decimal(10,3), " +
+                    "valorVenda decimal(10,2), " +
+                    "foto varchar(100))", Conexao);
+
+                Comando.ExecuteNonQuery();
+
+
                 //Chama a função para fechar a conexão com o banco
                 Fechar_Conexao();
 

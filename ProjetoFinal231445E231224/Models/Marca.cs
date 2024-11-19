@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal231445E231224.Models
 {
-    internal class Marca
+    public class Marca
     {
         public int id { get; set; }
         public string marca { get; set; }
