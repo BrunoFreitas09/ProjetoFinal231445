@@ -113,13 +113,15 @@ namespace ProjetoFinal231445E231224.Views
             carregarGrid("");
         }
 
-        private void dgvCidades_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvMarca.RowCount > 0)
             {
                 txtID.Text = dgvMarca.CurrentRow.Cells["ID"].Value.ToString();
                 txtNomeMarca.Text = dgvMarca.CurrentRow.Cells["Nome"].Value.ToString();
+
             }
         }
     }
-}
+    }
+

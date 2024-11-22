@@ -163,6 +163,7 @@
             this.dgvMarca.ReadOnly = true;
             this.dgvMarca.Size = new System.Drawing.Size(491, 121);
             this.dgvMarca.TabIndex = 12;
+            this.dgvMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarca_CellContentClick);
             // 
             // FrmMarcas
             // 

@@ -32,6 +32,7 @@
             this.cadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.cadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CidadesToolStripMenuItem,
-            this.marcaToolStripMenuItem1});
+            this.marcaToolStripMenuItem1,
+            this.categoriaToolStripMenuItem});
             this.cadToolStripMenuItem.Name = "cadToolStripMenuItem";
             this.cadToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadToolStripMenuItem.Text = "Cadastros";
@@ -67,6 +69,12 @@
             this.marcaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.marcaToolStripMenuItem1.Text = "Marca";
             this.marcaToolStripMenuItem1.Click += new System.EventHandler(this.marcaToolStripMenuItem1_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
             // 
             // frmMenu
             // 
@@ -91,5 +99,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
     }
 }
