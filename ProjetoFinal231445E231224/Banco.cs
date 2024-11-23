@@ -88,7 +88,7 @@ namespace ProjetoFinal231445E231224
 
 
 
-                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Cidades " +
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Cidades " + // esse c em 
                     "(id integer auto_increment primary key, " +
                     "nome char(40), " +
                     "uf char(02))", Conexao);
@@ -97,6 +97,12 @@ namespace ProjetoFinal231445E231224
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas " +
                     "(id integer auto_increment primary key," +
                     "nome char(40))", Conexao);
+                Comando.ExecuteNonQuery();
+
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS categorias " +
+                    "(id integer auto_increment primary key," +
+                    "categoria char(40))", Conexao);
                 Comando.ExecuteNonQuery();
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS produtos " +

@@ -13,7 +13,7 @@ namespace ProjetoFinal231445E231224.Views
 {
     public partial class FrmCategorias : Form
     {
-        Categoria T;
+        Categorias cat;
         public FrmCategorias()
         {
             InitializeComponent();
@@ -27,11 +27,11 @@ namespace ProjetoFinal231445E231224.Views
 
         void carregarGrid(string busca)
         {
-            T = new Categoria();
+            cat = new Categorias()
             {
-                categoria = busca;
+                categoria = busca
             };
-            dgvCategoria.DataSource = T.Consultar();
+            dgvCategoria.DataSource = cat.Consultar();
         }
 
 
@@ -39,11 +39,11 @@ namespace ProjetoFinal231445E231224.Views
         {
             if (txtNomeCategoria.Text == String.Empty) return;
 
-            T = new Categoria()
+            cat = new Categorias()
             {
                 categoria = txtNomeCategoria.Text,
             };
-            T = new Categoria();
+            cat = new Categorias();
 
             limpacontroles();
             carregarGrid("");

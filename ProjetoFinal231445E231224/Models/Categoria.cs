@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal231445E231224.Models
 {
-    public class Categoria
+    public class Categorias
     {
 
         public int id { get; set; }

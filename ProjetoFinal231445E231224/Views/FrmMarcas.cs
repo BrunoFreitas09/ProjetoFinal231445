@@ -77,24 +77,7 @@ namespace ProjetoFinal231445E231224.Views
             carregarGrid("");
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            if (txtID.Text == "") return;
 
-
-            if (MessageBox.Show("Deseja realizar a exclusão da Cidade?", "Exclusão",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                M = new Marca()
-                {
-                    id = int.Parse(txtID.Text)
-                };
-                M.Excluir();
-
-                limpacontroles();
-                carregarGrid("");
-            }
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -107,11 +90,6 @@ namespace ProjetoFinal231445E231224.Views
             carregarGrid(txtPesquisa.Text);
         }
 
-        private void FrmCidades_Load_1(object sender, EventArgs e)
-        {
-            limpacontroles();
-            carregarGrid("");
-        }
 
         private void dgvMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -120,6 +98,31 @@ namespace ProjetoFinal231445E231224.Views
                 txtID.Text = dgvMarca.CurrentRow.Cells["ID"].Value.ToString();
                 txtNomeMarca.Text = dgvMarca.CurrentRow.Cells["Nome"].Value.ToString();
 
+            }
+        }
+
+        private void FrmMarcas_Load(object sender, EventArgs e)
+        {
+            limpacontroles();
+            carregarGrid("");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+
+            if (MessageBox.Show("Deseja realizar a exclusão da Marca?", "Exclusão",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                M = new Marca()
+                {
+                    id = int.Parse(txtID.Text)
+                };
+                M.Excluir();
+
+                limpacontroles();
+                carregarGrid("");
             }
         }
     }
