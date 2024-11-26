@@ -14,6 +14,7 @@ namespace ProjetoFinal231445E231224
         private void frmMenu_Load(object sender, EventArgs e)
         {
             Banco.CriarBanco();
+            Banco.CriarTabelas();
         }
 
         private void CidadesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,6 +27,13 @@ namespace ProjetoFinal231445E231224
         private void marcaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmMarcas form = new FrmMarcas();
+            form.Show();
+            Banco.CriarTabelas();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProdutos form = new FrmProdutos();
             form.Show();
             Banco.CriarTabelas();
         }

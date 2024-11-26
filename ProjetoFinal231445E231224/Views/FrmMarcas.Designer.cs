@@ -64,6 +64,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(23, 33);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(177, 20);
@@ -163,6 +164,7 @@
             this.dgvMarca.ReadOnly = true;
             this.dgvMarca.Size = new System.Drawing.Size(491, 121);
             this.dgvMarca.TabIndex = 12;
+            this.dgvMarca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarca_CellClick);
             this.dgvMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarca_CellContentClick);
             // 
             // FrmMarcas
