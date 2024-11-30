@@ -54,5 +54,6 @@ namespace ProjetoFinal231445E231224.Views
     
             carregarGrid(txtPesquisa.Text);
         }
+
     }
  }
