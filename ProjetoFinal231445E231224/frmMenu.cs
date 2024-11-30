@@ -37,5 +37,12 @@ namespace ProjetoFinal231445E231224
             form.Show();
             Banco.CriarTabelas();
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias form = new FrmCategorias();
+            form.Show();
+            Banco.CriarTabelas();
+        }
     }
 }
