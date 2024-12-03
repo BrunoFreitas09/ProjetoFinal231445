@@ -89,8 +89,8 @@ namespace ProjetoFinal231445E231224.Models
                 //abrindo a conexão com o banco
                 Banco.Abrirconexao();
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                Banco.Comando = new MySqlCommand("SELECT * FROM marcas WHERE nome LIKE @nome " +   //Esse N maiúsculo é bem sus
-                                                                       "order by nome", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("SELECT * FROM marcas WHERE NomeMarca LIKE @nome " +   //Esse N maiúsculo é bem sus
+                                                                       "order by NomeMarca", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
                 Banco.Comando.Parameters.AddWithValue("@nome", NomeMarca + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);

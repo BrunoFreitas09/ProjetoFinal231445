@@ -24,7 +24,7 @@ namespace ProjetoFinal231445E231224
             try
             {
                 //Estabelece os parâmetros para a conexão com o banco
-                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau; DATABASE = vendas");
+                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau; DATABASE =vendas");
 
                 //Abre a conexão com o banco de dados 
                 Conexao.Open();
@@ -97,7 +97,7 @@ namespace ProjetoFinal231445E231224
 
                 Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS marcas " +
                     "(id integer auto_increment primary key," +
-                    "marcas char(40))", Conexao);
+                    "NomeMarca char(40))", Conexao);
                 Comando.ExecuteNonQuery();
 
 
