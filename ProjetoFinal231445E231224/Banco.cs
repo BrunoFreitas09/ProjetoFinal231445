@@ -24,7 +24,7 @@ namespace ProjetoFinal231445E231224
             try
             {
                 //Estabelece os parâmetros para a conexão com o banco
-                Conexao = new MySqlConnection("server=localhost;port=3306;uid=root;pwd=etecjau");
+                Conexao = new MySqlConnection("server=localhost;port=3307;uid=root;pwd=etecjau");
 
                 //Abre a conexão com o banco de dados 
                 Conexao.Open();
@@ -101,7 +101,7 @@ namespace ProjetoFinal231445E231224
                 Comando.ExecuteNonQuery();
 
 
-                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS categorias " +
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Categorias " +
                     "(id integer auto_increment primary key," +
                     "categoria char(40))", Conexao);
                 Comando.ExecuteNonQuery();
@@ -117,7 +117,7 @@ namespace ProjetoFinal231445E231224
 
                 Comando.ExecuteNonQuery();
 
-                Comando = new MySqlCommand("create table if not exists clientes" +
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS clientes" +
                   "(id integer auto_increment primary key, " +
                   "nome char(40), " +
                   "idCidade integer, " +
@@ -129,14 +129,14 @@ namespace ProjetoFinal231445E231224
 
                 Comando.ExecuteNonQuery();
 
-                Comando = new MySqlCommand("create table if not exists vendaCab" +
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS vendaCab" +
                     "(id integer auto_increment primary key," +
                     "idCliente int," +
                     "data date," +
                     "total decimal(10,2))", Conexao);
                 Comando.ExecuteNonQuery();
 
-                Comando = new MySqlCommand("create table if not exists vendaDet" +
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS vendaDet" +
                     "(id integer auto_increment primary key," +
                     "idVendaCab int," +
                     "idProduto int," +

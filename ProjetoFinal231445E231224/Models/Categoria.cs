@@ -22,7 +22,7 @@ namespace ProjetoFinal231445E231224.Models
                     //abrindo a conexão com o banco
                     Banco.Abrirconexao();
                     //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                    Banco.Comando = new MySqlCommand("INSERT INTO Categoria (categoria) VALUES (@nome)", Banco.Conexao);
+                    Banco.Comando = new MySqlCommand("INSERT INTO Categorias (categoria) VALUES (@nome)", Banco.Conexao);
                     //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
 
                     Banco.Comando.Parameters.AddWithValue("@nome", categoria);//Parâmetro string 
@@ -46,7 +46,7 @@ namespace ProjetoFinal231445E231224.Models
                     //abrindo a conexão com o banco
                     Banco.Abrirconexao();
                     //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                    Banco.Comando = new MySqlCommand("UPDATE produtos set categoria = @nome where id = @id", Banco.Conexao);
+                    Banco.Comando = new MySqlCommand("UPDATE Categorias SET categoria = @nome WHERE id = @id", Banco.Conexao);
                     //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
                     Banco.Comando.Parameters.AddWithValue("@nome", categoria);//Parâmetro string 
                     Banco.Comando.Parameters.AddWithValue("@id", id);
@@ -69,7 +69,7 @@ namespace ProjetoFinal231445E231224.Models
                     //abrindo a conexão com o banco
                     Banco.Abrirconexao();
                     //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                    Banco.Comando = new MySqlCommand("DELETE FROM produtos WHERE id = @id", Banco.Conexao);
+                    Banco.Comando = new MySqlCommand("DELETE FROM Categorias WHERE id = @id", Banco.Conexao);
                     //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
                     Banco.Comando.Parameters.AddWithValue("@id", id);
                     //execura o Comando, no MYSQL, tem afunção do raio do Workbench
@@ -91,7 +91,7 @@ namespace ProjetoFinal231445E231224.Models
                     //abrindo a conexão com o banco
                     Banco.Abrirconexao();
                     //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                    Banco.Comando = new MySqlCommand("SELECT * FROM produtos where categoria like @nome " +   
+                    Banco.Comando = new MySqlCommand("SELECT * FROM Categorias where categoria like @nome " +   
                                                                            "order by categoria", Banco.Conexao);
                     //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
                     Banco.Comando.Parameters.AddWithValue("@nome", categoria + "%");

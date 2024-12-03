@@ -55,6 +55,7 @@
             this.dgvCategoria.ReadOnly = true;
             this.dgvCategoria.Size = new System.Drawing.Size(491, 121);
             this.dgvCategoria.TabIndex = 25;
+            this.dgvCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellClick);
             // 
             // txtPesquisa
             // 
@@ -90,6 +91,7 @@
             this.btnFechar.TabIndex = 21;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnExcluir
             // 
@@ -99,6 +101,7 @@
             this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -117,6 +120,7 @@
             this.btnAlterar.TabIndex = 18;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnIncluir
             // 
@@ -181,6 +185,7 @@
             this.Controls.Add(this.lblID);
             this.Name = "FrmCategorias";
             this.Text = "FrmCategorias";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

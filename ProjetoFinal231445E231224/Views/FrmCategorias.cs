@@ -43,7 +43,7 @@ namespace ProjetoFinal231445E231224.Views
             {
                 categoria = txtNomeCategoria.Text,
             };
-            cat = new Categorias();
+            cat.Incluir();
 
             limpacontroles();
             carregarGrid("");
@@ -51,9 +51,66 @@ namespace ProjetoFinal231445E231224.Views
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-    
             carregarGrid(txtPesquisa.Text);
         }
 
+        private void FrmCategorias_Load(object sender, EventArgs e)
+        {
+            limpacontroles();
+            carregarGrid("");
+        }
+
+        
+
+
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "") return;
+
+
+            if (MessageBox.Show("Deseja realizar a exclusão da Categoria?", "Exclusão",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cat = new Categorias()
+                {
+                    id = int.Parse(txtID.Text)
+                };
+                cat.Excluir();
+
+                limpacontroles();
+                carregarGrid("");
+            }
+        }
+
+        private void dgvCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCategoria.RowCount > 0)
+            {
+                txtID.Text = dgvCategoria.CurrentRow.Cells["ID"].Value.ToString();
+                txtNomeCategoria.Text = dgvCategoria.CurrentRow.Cells["categoria"].Value.ToString();
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == String.Empty) return;
+            cat = new Categorias()
+            {
+                id = int.Parse(txtID.Text),
+                categoria = txtNomeCategoria.Text
+
+            };
+            cat.Alterar();
+
+            limpacontroles();
+            carregarGrid("");
+        }
     }
- }
+}
+

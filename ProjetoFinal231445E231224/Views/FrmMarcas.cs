@@ -91,10 +91,7 @@ namespace ProjetoFinal231445E231224.Views
         }
 
 
-        private void dgvMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
+
 
         private void FrmMarcas_Load(object sender, EventArgs e)
         {
