@@ -125,7 +125,7 @@
             // picFoto
             // 
             this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picFoto.Location = new System.Drawing.Point(596, -1);
+            this.picFoto.Location = new System.Drawing.Point(589, 12);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(177, 161);
             this.picFoto.TabIndex = 82;
@@ -193,9 +193,13 @@
             // 
             // dgvClientes
             // 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToOrderColumns = true;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(12, 379);
             this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(762, 225);
             this.dgvClientes.TabIndex = 75;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);

@@ -44,5 +44,12 @@ namespace ProjetoFinal231445E231224
             form.Show();
             Banco.CriarTabelas();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes form = new FrmClientes();
+            form.Show();
+            Banco.CriarTabelas();
+        }
     }
 }

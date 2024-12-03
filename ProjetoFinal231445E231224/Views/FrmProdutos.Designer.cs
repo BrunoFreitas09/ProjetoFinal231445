@@ -246,6 +246,7 @@
             // 
             // picFoto
             // 
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picFoto.Location = new System.Drawing.Point(444, 54);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(150, 137);

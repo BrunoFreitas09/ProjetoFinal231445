@@ -90,15 +90,16 @@ namespace ProjetoFinal231445E231224.Models
                 //abrindo a conexão com o banco
                 Banco.Abrirconexao();
                 //Alimentando o método Command com a instrução desejada e indica a conexão utilizada
-                Banco.Comando = new MySqlCommand("SELECT * FROM produtos WHERE descricao LIKE @nome " +   //Esse N maiúsculo é bem sus
-                                                                       "ORDER BY descricao", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("SELECT p.*, m.marcas, c.categoria FROM " +
+                    "produtos p INNER JOIN marcas m on (m.id = p.idMarca) " +
+                    "INNER JOIN Categorias c ON @descricao ORDER BY p.descricao", Banco.Conexao);
                 //Cria os parâmetros utilizados na instrução SQL com seu respectivo conteúdo 
-                Banco.Comando.Parameters.AddWithValue("@nome", descricao + "%");
+                Banco.Comando.Parameters.AddWithValue("@descricao", descricao + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.datTabela = new DataTable();
                 Banco.Adaptador.Fill(Banco.datTabela);
-                Banco.Fechar_Conexao();
                 return Banco.datTabela;
+
 
             }
             catch (Exception ex)

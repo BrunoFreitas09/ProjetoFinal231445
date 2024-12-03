@@ -77,10 +77,10 @@ namespace ProjetoFinal231445E231224.Views
 
         private void cboCidades_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboCidades.SelectedIndex != 1)
+            if (cboCidades.SelectedIndex != -1)
             {
                 DataRowView reg = (DataRowView)cboCidades.SelectedItem;
-                txtUf.Text = reg["uf"].ToString();
+                txtUf.Text = reg["UF"].ToString();
             }
         }
 
